@@ -1,0 +1,1838 @@
+  [1m[35m (1393.0ms)[0m  [1m[35mCREATE DATABASE "miniflix_development" ENCODING = 'unicode'[0m
+  [1m[35m (780.1ms)[0m  [1m[35mCREATE DATABASE "sample_project_test" ENCODING = 'unicode'[0m
+Started GET "/" for ::1 at 2021-01-01 20:55:34 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.5ms | Allocations: 407)
+Completed 200 OK in 14ms (Views: 9.3ms | ActiveRecord: 0.0ms | Allocations: 2387)
+
+
+Started GET "/admin" for ::1 at 2021-01-01 20:55:38 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (Duration: 8.8ms | Allocations: 11478)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_head.html.haml (Duration: 1480.2ms | Allocations: 588118)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 5.9ms | Allocations: 4573)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 10.7ms | Allocations: 10173)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 1.9ms | Allocations: 2186)
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/pjax.html.haml (Duration: 3.6ms | Allocations: 5022)
+Completed 200 OK in 1781ms (Views: 1521.1ms | ActiveRecord: 2.7ms | Allocations: 727924)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2021-01-01 20:55:47 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (Duration: 0.2ms | Allocations: 69)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.0ms | Allocations: 1672)
+
+
+Started GET "/admin/?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2021-01-01 20:55:49 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]"}
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/pjax (Duration: 0.2ms | Allocations: 69)
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1267)
+
+
+  [1m[35m (100.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (85.8ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4586863541625385125)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20210101135633)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (46.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210101135633"]]
+  [1m[35m (10.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDeviseToUsers (20210101135652)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (103.5ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (90.7ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp[0m
+  [1m[35m (39.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (31.4ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210101135652"]]
+  [1m[35m (22.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-01 13:57:01.570581"], ["updated_at", "2021-01-01 13:57:01.570581"]]
+  [1m[35m (10.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4586863541625385125)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4586863541625385125)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4586863541625385125)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admin/" for ::1 at 2021-01-01 20:57:37 +0700
+  
+NoMethodError (undefined method `devise' for #<Class:0x00007f4548740f10>):
+  
+app/models/user.rb:4:in `<class:User>'
+app/models/user.rb:3:in `<main>'
+config/routes.rb:2:in `block in <main>'
+config/routes.rb:1:in `<main>'
+Started GET "/admin/" for ::1 at 2021-01-01 20:57:48 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 463)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-01-01 20:57:48 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 600)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 3598)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/bainur/projects/miniflix/public/packs
+[Webpacker] Hash: 76145d9ce4575ebaa29b
+Version: webpack 4.44.2
+Time: 1793ms
+Built at: 01/01/2021 8:57:51 PM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-c229f7c7014cf8c8d494.js    124 KiB  application  [emitted] [immutable]  application
+js/application-c229f7c7014cf8c8d494.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-c229f7c7014cf8c8d494.js js/application-c229f7c7014cf8c8d494.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 3122ms (Views: 3109.7ms | ActiveRecord: 3.7ms | Allocations: 65550)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-01-01 20:57:53 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 135)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 1068)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.0ms | Allocations: 4693)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-01-01 20:57:54 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.1ms | Allocations: 135)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1061)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 4684)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-01-01 20:57:55 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 135)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 1.7ms | Allocations: 1061)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.0ms | Allocations: 4666)
+
+
+Started GET "/admin" for ::1 at 2021-01-01 20:58:02 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 309)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-01-01 20:58:02 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 135)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1061)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.0ms | Allocations: 4671)
+
+
+Started GET "/" for ::1 at 2021-01-01 20:58:17 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.5ms | Allocations: 185)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.0ms | Allocations: 1315)
+
+
+Started GET "/admin" for ::1 at 2021-01-01 20:58:21 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 1244)
+
+
+  
+NoMethodError (undefined method `new_user_session_url' for #<Module:0x0000564f1e4ef458>):
+  
+actionpack (6.0.3.4) lib/action_dispatch/routing/routes_proxy.rb:45:in `new_user_session_url'
+devise (4.7.3) lib/devise/failure_app.rb:161:in `scope_url'
+devise (4.7.3) lib/devise/failure_app.rb:127:in `redirect_url'
+devise (4.7.3) lib/devise/failure_app.rb:87:in `redirect'
+devise (4.7.3) lib/devise/failure_app.rb:43:in `respond'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:195:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:238:in `block in action'
+devise (4.7.3) lib/devise/failure_app.rb:23:in `call'
+devise (4.7.3) lib/devise/delegator.rb:7:in `call'
+warden (1.2.9) lib/warden/manager.rb:143:in `call_failure_app'
+warden (1.2.9) lib/warden/manager.rb:129:in `process_unauthenticated'
+warden (1.2.9) lib/warden/manager.rb:44:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/admin" for ::1 at 2021-01-01 20:58:37 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 814)
+
+
+Started GET "/users/sign_in" for ::1 at 2021-01-01 20:58:37 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 525)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.1ms | Allocations: 1984)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 22ms (Views: 10.2ms | ActiveRecord: 3.7ms | Allocations: 11838)
+
+
+Started GET "/users/sign_up" for ::1 at 2021-01-01 20:59:08 +0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/registrations/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_error_messages.html.erb (Duration: 0.5ms | Allocations: 195)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 121)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/registrations/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1908)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms | Allocations: 6407)
+
+
+Started POST "/users" for ::1 at 2021-01-01 20:59:20 +0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"+byyTO8356H+dgBO3b5bvqhbahNoAY7ppvj92utuBEGkiS/860yOR8tWTkygzs8U6l/Mt++oaTHr2E7VzhSbJg==", "user"=>{"email"=>"admin@email.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.6ms)[0m  [1m[32mINSERT INTO "users" ("created_at", "updated_at", "email", "encrypted_password") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["created_at", "2021-01-01 13:59:20.811090"], ["updated_at", "2021-01-01 13:59:20.811090"], ["email", "admin@email.com"], ["encrypted_password", "$2a$12$mD0J2XgmRAglFKNvIf4eVOJfxg7kCnWQH6w.pBV5lkctbMXVrLrZu"]]
+  [1m[35m (22.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/admin/
+Completed 302 Found in 354ms (ActiveRecord: 24.0ms | Allocations: 10650)
+
+
+Started GET "/admin/" for ::1 at 2021-01-01 20:59:20 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (Duration: 12.2ms | Allocations: 12978)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_head.html.haml (Duration: 39.6ms | Allocations: 35251)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 4.1ms | Allocations: 4730)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 8.7ms | Allocations: 10292)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 2.6ms | Allocations: 2567)
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/pjax.html.haml (Duration: 4.1ms | Allocations: 5018)
+Completed 200 OK in 195ms (Views: 81.5ms | ActiveRecord: 3.4ms | Allocations: 159254)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2021-01-01 20:59:28 +0700
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 44.8ms | Allocations: 44620)
+Completed 200 OK in 53ms (Views: 47.8ms | ActiveRecord: 0.9ms | Allocations: 49881)
+
+
+Started GET "/admin/user/new?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2021-01-01 20:59:33 +0700
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_field.html.haml (Duration: 2.3ms | Allocations: 1761)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.2ms | Allocations: 171)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.2ms | Allocations: 154)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_datetime.html.haml (Duration: 3.0ms | Allocations: 2636)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_datetime.html.haml (Duration: 0.4ms | Allocations: 317)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_submit_buttons.html.haml (Duration: 9.3ms | Allocations: 10299)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (Duration: 27.2ms | Allocations: 21741)
+Completed 200 OK in 36ms (Views: 31.6ms | ActiveRecord: 0.4ms | Allocations: 26110)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2021-01-01 20:59:34 +0700
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 13.0ms | Allocations: 8093)
+Completed 200 OK in 21ms (Views: 16.0ms | ActiveRecord: 0.9ms | Allocations: 11877)
+
+
+Started GET "/admin/user/export?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2021-01-01 20:59:35 +0700
+Processing by RailsAdmin::MainController#export as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/pjax
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT ''::text AS str;[0m
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/export.html.haml within layouts/rails_admin/pjax (Duration: 24.1ms | Allocations: 31234)
+Completed 200 OK in 38ms (Views: 28.6ms | ActiveRecord: 0.6ms | Allocations: 35650)
+
+
+Started GET "/admin/user/new?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2021-01-01 20:59:36 +0700
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.3ms | Allocations: 160)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.3ms | Allocations: 156)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.3ms | Allocations: 152)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_datetime.html.haml (Duration: 0.9ms | Allocations: 315)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_datetime.html.haml (Duration: 0.4ms | Allocations: 315)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_submit_buttons.html.haml (Duration: 0.9ms | Allocations: 413)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (Duration: 8.9ms | Allocations: 4585)
+Completed 200 OK in 17ms (Views: 12.6ms | ActiveRecord: 0.4ms | Allocations: 8612)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2021-01-01 20:59:36 +0700
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 13.7ms | Allocations: 8087)
+Completed 200 OK in 20ms (Views: 16.1ms | ActiveRecord: 0.7ms | Allocations: 11873)
+
+
+Started GET "/admin/user?model_name=user&query=&_pjax=%5Bdata-pjax-container%5D" for ::1 at 2021-01-01 20:59:39 +0700
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user", "query"=>"", "_pjax"=>"[data-pjax-container]"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 14.5ms | Allocations: 8078)
+Completed 200 OK in 22ms (Views: 17.1ms | ActiveRecord: 0.8ms | Allocations: 11852)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2021-01-01 20:59:45 +0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"47452R+Gxddy0IPSHafH9T7VuTN08R4t6W0ryU8OP8pNHQaXfXOfGsFWFF1+XU1SUTy/qX4ISgtWn/0yT6VDuw=="}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 13ms (ActiveRecord: 0.3ms | Allocations: 4851)
+
+
+Started GET "/" for ::1 at 2021-01-01 20:59:45 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 6.4ms | Allocations: 181)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms | Allocations: 915)
+
+
+Started GET "/" for ::1 at 2021-01-01 21:01:13 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.1ms | Allocations: 7)
+Completed 200 OK in 3ms (Views: 0.6ms | ActiveRecord: 0.0ms | Allocations: 1896)
+
+
+Started GET "/admin" for ::1 at 2021-01-01 21:01:16 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 410)
+
+
+Started GET "/accounts/login" for ::1 at 2021-01-01 21:01:16 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 149)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 1101)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 5.6ms | ActiveRecord: 3.5ms | Allocations: 9154)
+
+
+Started GET "/accounts/login" for ::1 at 2021-01-01 21:01:36 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/accounts/login"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/admin" for ::1 at 2021-01-01 21:01:41 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 437)
+
+
+Started GET "/admin/login" for ::1 at 2021-01-01 21:01:41 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 147)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1087)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 6.7ms | ActiveRecord: 4.2ms | Allocations: 9140)
+
+
+Started GET "/admin/" for ::1 at 2021-01-01 21:01:47 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 1ms (ActiveRecord: 0.0ms | Allocations: 313)
+
+
+Started GET "/admin/login" for ::1 at 2021-01-01 21:01:47 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 135)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1060)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 4672)
+
+
+Started GET "/admin/login" for ::1 at 2021-01-01 21:02:06 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 147)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 1134)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 6.1ms | ActiveRecord: 3.8ms | Allocations: 9159)
+
+
+Started POST "/admin/login" for ::1 at 2021-01-01 21:02:13 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"q8+Apt1b7IW0Uqdf7CUgbFUCVPam7z+wULmTiReTAChKDBWN1sE+jFz0Wl13F2bSBJKnBmR9PYraovKzaqq/wA==", "user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.4ms | Allocations: 2132)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"q8+Apt1b7IW0Uqdf7CUgbFUCVPam7z+wULmTiReTAChKDBWN1sE+jFz0Wl13F2bSBJKnBmR9PYraovKzaqq/wA==", "user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 135)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1063)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 282ms (Views: 12.0ms | ActiveRecord: 0.0ms | Allocations: 4569)
+
+
+Started POST "/admin/login" for ::1 at 2021-01-01 21:02:20 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"zNcI7WmuniTxNTFyFobTkwB1ISSUqH5CR3RxE1J4w/ctFJ3GYjRMLRmTzHCNtJUtUeXS1FY6fHjNbxApL0F8Hw==", "user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.4ms | Allocations: 1864)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"zNcI7WmuniTxNTFyFobTkwB1ISSUqH5CR3RxE1J4w/ctFJ3GYjRMLRmTzHCNtJUtUeXS1FY6fHjNbxApL0F8Hw==", "user"=>{"email"=>"admin@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 135)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1060)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 282ms (Views: 6.2ms | ActiveRecord: 0.0ms | Allocations: 4561)
+
+
+Started POST "/admin/login" for ::1 at 2021-01-01 21:02:24 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"ewbACaVKvQ0jpawQPiTxHpOiQuECoCCWjQowYfubNGmaxVUirtBvBMsDURKlFregwjKxEcAyIqwHEVFbhqKLgQ==", "user"=>{"email"=>"admin@email.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "admin@email.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/admin/
+Completed 302 Found in 279ms (ActiveRecord: 0.4ms | Allocations: 3298)
+
+
+Started GET "/admin/" for ::1 at 2021-01-01 21:02:25 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/dashboard.html.haml within layouts/rails_admin/application (Duration: 2.1ms | Allocations: 1409)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_head.html.haml (Duration: 67.5ms | Allocations: 28845)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 4.2ms | Allocations: 1386)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 4.8ms | Allocations: 1567)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 1.7ms | Allocations: 471)
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/pjax.html.haml (Duration: 1.5ms | Allocations: 527)
+Completed 200 OK in 88ms (Views: 80.7ms | ActiveRecord: 0.9ms | Allocations: 38073)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2021-01-01 21:02:32 +0700
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 13.0ms | Allocations: 8118)
+Completed 200 OK in 20ms (Views: 15.3ms | ActiveRecord: 0.7ms | Allocations: 11941)
+
+
+Started GET "/admin/user/new?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2021-01-01 21:02:41 +0700
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.2ms | Allocations: 160)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.2ms | Allocations: 156)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.2ms | Allocations: 153)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_datetime.html.haml (Duration: 0.4ms | Allocations: 316)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_datetime.html.haml (Duration: 0.3ms | Allocations: 316)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_submit_buttons.html.haml (Duration: 0.5ms | Allocations: 412)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (Duration: 14.1ms | Allocations: 7295)
+Completed 200 OK in 21ms (Views: 17.5ms | ActiveRecord: 0.3ms | Allocations: 11319)
+
+
+Started GET "/admin/user?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2021-01-01 21:02:43 +0700
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/pjax (Duration: 12.2ms | Allocations: 8081)
+Completed 200 OK in 20ms (Views: 14.4ms | ActiveRecord: 0.8ms | Allocations: 11842)
+
+
+Started GET "/admin/user/new?_pjax=%5Bdata-pjax-container%5D" for ::1 at 2021-01-01 21:02:56 +0700
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"_pjax"=>"[data-pjax-container]", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.3ms | Allocations: 160)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.3ms | Allocations: 156)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_field.html.haml (Duration: 0.2ms | Allocations: 152)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_datetime.html.haml (Duration: 0.5ms | Allocations: 315)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_form_datetime.html.haml (Duration: 0.6ms | Allocations: 315)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/_submit_buttons.html.haml (Duration: 0.9ms | Allocations: 412)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/new.html.haml within layouts/rails_admin/pjax (Duration: 9.2ms | Allocations: 4578)
+Completed 200 OK in 17ms (Views: 13.7ms | ActiveRecord: 0.3ms | Allocations: 8597)
+
+
+Started POST "/admin/user/new" for ::1 at 2021-01-01 21:02:59 +0700
+Processing by RailsAdmin::MainController#new as HTML
+  Parameters: {"authenticity_token"=>"UmiSHrmak8FybH+O5g35GO9KdUIFg6orBjFaEeuBzkD5UoMb9o/6jRnmwheo+cajJf+KjTGteeaYYVfb+VZxkQ==", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "reset_password_sent_at"=>"[FILTERED]", "remember_created_at"=>""}, "return_to"=>"http://localhost:3000/admin/user", "_continue"=>"", "model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+Redirected to http://localhost:3000/admin/user
+Filter chain halted as :check_for_cancel rendered or redirected
+Completed 302 Found in 5ms (ActiveRecord: 0.3ms | Allocations: 1562)
+
+
+Started GET "/admin/user" for ::1 at 2021-01-01 21:02:59 +0700
+Processing by RailsAdmin::MainController#index as HTML
+  Parameters: {"model_name"=>"user"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ config/initializers/rails_admin.rb:7:in `block (2 levels) in <main>'
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY users.id desc LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/rails_admin/main/index.html.haml within layouts/rails_admin/application (Duration: 11.7ms | Allocations: 8078)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_head.html.haml (Duration: 32.2ms | Allocations: 28738)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_secondary_navigation.html.haml (Duration: 1.6ms | Allocations: 1304)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_navigation.html.haml (Duration: 2.2ms | Allocations: 1481)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/_sidebar_navigation.html.haml (Duration: 0.9ms | Allocations: 467)
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/pjax.html.haml
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/bundler/gems/rails_admin-f0c46f1e128b/app/views/layouts/rails_admin/pjax.html.haml (Duration: 2.5ms | Allocations: 1672)
+Completed 200 OK in 56ms (Views: 50.8ms | ActiveRecord: 0.8ms | Allocations: 43038)
+
+
+Started GET "/" for ::1 at 2021-01-04 11:06:32 +0700
+  [1m[35m (46.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 24.4ms | Allocations: 295)
+Completed 200 OK in 146ms (Views: 107.9ms | ActiveRecord: 0.0ms | Allocations: 1656)
+
+
+Started GET "/admin" for ::1 at 2021-01-04 11:14:26 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 2ms (ActiveRecord: 0.0ms | Allocations: 302)
+
+
+Started GET "/admin/login" for ::1 at 2021-01-04 11:14:27 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 1.0ms | Allocations: 603)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 13.0ms | Allocations: 2894)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 513ms (Views: 445.8ms | ActiveRecord: 51.5ms | Allocations: 57730)
+
+
+Started POST "/admin/login" for ::1 at 2021-01-04 11:14:29 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"HGTKNEHZ6UsvDC1t9OZca4XCYNt45I1ZVcPfv3Jh+jclVPe06abqdi7PfPDfJQH7L7wmp8RK97uMWKAZ93av7g==", "user"=>{"email"=>"user1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (76.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "user1@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 222ms (ActiveRecord: 76.3ms | Allocations: 2471)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"HGTKNEHZ6UsvDC1t9OZca4XCYNt45I1ZVcPfv3Jh+jclVPe06abqdi7PfPDfJQH7L7wmp8RK97uMWKAZ93av7g==", "user"=>{"email"=>"user1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 135)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1070)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 330ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 5078)
+
+
+Started POST "/admin/login" for ::1 at 2021-01-04 11:14:32 +0700
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"authenticity_token"=>"Bhg1xS3JfGNQWCtmCxy9DRe0suw57nZZSmAlCrG9LRs/KAhFhbZ/XlGbevsg3+Cdvcr0kIVADLuT+1qsNKp4wg==", "user"=>{"email"=>"user1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "user1@example.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 4ms (ActiveRecord: 0.5ms | Allocations: 1869)
+
+
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"Bhg1xS3JfGNQWCtmCxy9DRe0suw57nZZSmAlCrG9LRs/KAhFhbZ/XlGbevsg3+Cdvcr0kIVADLuT+1qsNKp4wg==", "user"=>{"email"=>"user1@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 0.2ms | Allocations: 135)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 2.0ms | Allocations: 1061)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 275ms (Views: 5.6ms | ActiveRecord: 0.0ms | Allocations: 4560)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4586863541625385125)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateMovies (20210104041803)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (397.1ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "name" character varying, "year" smallint, "director" character varying(60), "main_star" character varying(60), "description" text, "favorited" integer DEFAULT 0, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210104041803"]]
+  [1m[35m (27.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateGenres (20210104043143)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (43.7ms)[0m  [1m[35mCREATE TABLE "genres" ("id" bigserial primary key, "name" character varying(64), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "movies_genres" ("movie_id" bigint, "genre_id" bigint)[0m
+  [1m[35m (51.5ms)[0m  [1m[35mCREATE  INDEX  "index_movies_genres_on_movie_id" ON "movies_genres"  ("movie_id")[0m
+  [1m[35m (42.3ms)[0m  [1m[35mCREATE  INDEX  "index_movies_genres_on_genre_id" ON "movies_genres"  ("genre_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210104043143"]]
+  [1m[35m (18.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (20.2ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4586863541625385125)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2021-01-04 11:33:42 +0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.4ms | Allocations: 183)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.0ms | Allocations: 2358)
+
+
+Started GET "/phppgadmin" for ::1 at 2021-01-04 11:33:45 +0700
+  
+ActionController::RoutingError (No route matches [GET] "/phppgadmin"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMovie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "movies"[0m
+  [1m[36mGenre Destroy (0.3ms)[0m  [1m[31mDELETE FROM "genres"[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMovie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "movies"[0m
+  [1m[36mGenre Destroy (0.3ms)[0m  [1m[31mDELETE FROM "genres"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "director", "main_star", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "STAR WARS: THE RISE OF SKYWALKER"], ["year", 1977], ["director", "J.J. Abrams"], ["main_star", "Mark Hammil, Adam Driver"], ["description", "When it's discovered that the evil Emperor Palpatine did not die at the hands of Darth Vader, the rebels must race against the clock to find out his whereabouts. Finn and Poe lead the Resistance to put a stop to the First Order's plans to form a new Empire, while Rey anticipates her inevitable confrontation with Kylo"], ["created_at", "2021-01-04 04:52:00.025921"], ["updated_at", "2021-01-04 04:52:00.025921"]]
+  [1m[35m (18.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.3ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "director", "main_star", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "THE LORD OF THE RINGS - THE RETURN OF THE KING"], ["year", 2003], ["director", "Peter Jackson"], ["main_star", "Elijah Wood, Ian Mc Kellen"], ["description", "The culmination of nearly 10 years' work and conclusion\nto Peter Jackson's epic trilogy based on the timeless J.R.R. Tolkien classic,\n 'The Lord of the Rings: The Return of the King' presents the final confrontation between the forces of good and evil fighting for control of the future of Middle-earth. Hobbits Frodo and Sam reach Mordor in their quest to destroy the `one ring', while Aragorn leads the forces of good against Sauron's evil army at the stone city of Minas Tirith."], ["created_at", "2021-01-04 04:52:00.048889"], ["updated_at", "2021-01-04 04:52:00.048889"]]
+  [1m[35m (7.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Action"], ["created_at", "2021-01-04 04:52:00.063558"], ["updated_at", "2021-01-04 04:52:00.063558"]]
+  [1m[35m (3.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Adventure"], ["created_at", "2021-01-04 04:52:00.070528"], ["updated_at", "2021-01-04 04:52:00.070528"]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Animation"], ["created_at", "2021-01-04 04:52:00.081956"], ["updated_at", "2021-01-04 04:52:00.081956"]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Biography"], ["created_at", "2021-01-04 04:52:00.093765"], ["updated_at", "2021-01-04 04:52:00.093765"]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Comedy"], ["created_at", "2021-01-04 04:52:00.104498"], ["updated_at", "2021-01-04 04:52:00.104498"]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Crime"], ["created_at", "2021-01-04 04:52:00.115139"], ["updated_at", "2021-01-04 04:52:00.115139"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Documentary"], ["created_at", "2021-01-04 04:52:00.126463"], ["updated_at", "2021-01-04 04:52:00.126463"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Drama"], ["created_at", "2021-01-04 04:52:00.137687"], ["updated_at", "2021-01-04 04:52:00.137687"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.6ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fantasy"], ["created_at", "2021-01-04 04:52:00.148881"], ["updated_at", "2021-01-04 04:52:00.148881"]]
+  [1m[35m (4.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "History"], ["created_at", "2021-01-04 04:52:00.159825"], ["updated_at", "2021-01-04 04:52:00.159825"]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Horror"], ["created_at", "2021-01-04 04:52:00.170294"], ["updated_at", "2021-01-04 04:52:00.170294"]]
+  [1m[35m (6.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Musical"], ["created_at", "2021-01-04 04:52:00.181950"], ["updated_at", "2021-01-04 04:52:00.181950"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mystery"], ["created_at", "2021-01-04 04:52:00.192760"], ["updated_at", "2021-01-04 04:52:00.192760"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Romance"], ["created_at", "2021-01-04 04:52:00.204099"], ["updated_at", "2021-01-04 04:52:00.204099"]]
+  [1m[35m (9.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sci-Fi"], ["created_at", "2021-01-04 04:52:00.226130"], ["updated_at", "2021-01-04 04:52:00.226130"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thriller"], ["created_at", "2021-01-04 04:52:00.237345"], ["updated_at", "2021-01-04 04:52:00.237345"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.6ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "War"], ["created_at", "2021-01-04 04:52:00.248539"], ["updated_at", "2021-01-04 04:52:00.248539"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Western"], ["created_at", "2021-01-04 04:52:00.259760"], ["updated_at", "2021-01-04 04:52:00.259760"]]
+  [1m[35m (5.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres" ORDER BY rand() LIMIT $1[0m  [["LIMIT", 3]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMovie Destroy (26.8ms)[0m  [1m[31mDELETE FROM "movies"[0m
+  [1m[36mGenre Destroy (3.2ms)[0m  [1m[31mDELETE FROM "genres"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "director", "main_star", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "STAR WARS: THE RISE OF SKYWALKER"], ["year", 1977], ["director", "J.J. Abrams"], ["main_star", "Mark Hammil, Adam Driver"], ["description", "When it's discovered that the evil Emperor Palpatine did not die at the hands of Darth Vader, the rebels must race against the clock to find out his whereabouts. Finn and Poe lead the Resistance to put a stop to the First Order's plans to form a new Empire, while Rey anticipates her inevitable confrontation with Kylo"], ["created_at", "2021-01-04 04:52:18.984057"], ["updated_at", "2021-01-04 04:52:18.984057"]]
+  [1m[35m (8.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "director", "main_star", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "THE LORD OF THE RINGS - THE RETURN OF THE KING"], ["year", 2003], ["director", "Peter Jackson"], ["main_star", "Elijah Wood, Ian Mc Kellen"], ["description", "The culmination of nearly 10 years' work and conclusion\nto Peter Jackson's epic trilogy based on the timeless J.R.R. Tolkien classic,\n 'The Lord of the Rings: The Return of the King' presents the final confrontation between the forces of good and evil fighting for control of the future of Middle-earth. Hobbits Frodo and Sam reach Mordor in their quest to destroy the `one ring', while Aragorn leads the forces of good against Sauron's evil army at the stone city of Minas Tirith."], ["created_at", "2021-01-04 04:52:18.996548"], ["updated_at", "2021-01-04 04:52:18.996548"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Action"], ["created_at", "2021-01-04 04:52:19.016161"], ["updated_at", "2021-01-04 04:52:19.016161"]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Adventure"], ["created_at", "2021-01-04 04:52:19.030144"], ["updated_at", "2021-01-04 04:52:19.030144"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Animation"], ["created_at", "2021-01-04 04:52:19.041713"], ["updated_at", "2021-01-04 04:52:19.041713"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Biography"], ["created_at", "2021-01-04 04:52:19.052601"], ["updated_at", "2021-01-04 04:52:19.052601"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Comedy"], ["created_at", "2021-01-04 04:52:19.063171"], ["updated_at", "2021-01-04 04:52:19.063171"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Crime"], ["created_at", "2021-01-04 04:52:19.074758"], ["updated_at", "2021-01-04 04:52:19.074758"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Documentary"], ["created_at", "2021-01-04 04:52:19.085973"], ["updated_at", "2021-01-04 04:52:19.085973"]]
+  [1m[35m (5.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Drama"], ["created_at", "2021-01-04 04:52:19.097246"], ["updated_at", "2021-01-04 04:52:19.097246"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fantasy"], ["created_at", "2021-01-04 04:52:19.107877"], ["updated_at", "2021-01-04 04:52:19.107877"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "History"], ["created_at", "2021-01-04 04:52:19.118720"], ["updated_at", "2021-01-04 04:52:19.118720"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.6ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Horror"], ["created_at", "2021-01-04 04:52:19.130360"], ["updated_at", "2021-01-04 04:52:19.130360"]]
+  [1m[35m (49.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Musical"], ["created_at", "2021-01-04 04:52:19.185479"], ["updated_at", "2021-01-04 04:52:19.185479"]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mystery"], ["created_at", "2021-01-04 04:52:19.196529"], ["updated_at", "2021-01-04 04:52:19.196529"]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Romance"], ["created_at", "2021-01-04 04:52:19.207933"], ["updated_at", "2021-01-04 04:52:19.207933"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sci-Fi"], ["created_at", "2021-01-04 04:52:19.225471"], ["updated_at", "2021-01-04 04:52:19.225471"]]
+  [1m[35m (11.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thriller"], ["created_at", "2021-01-04 04:52:19.241360"], ["updated_at", "2021-01-04 04:52:19.241360"]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "War"], ["created_at", "2021-01-04 04:52:19.252064"], ["updated_at", "2021-01-04 04:52:19.252064"]]
+  [1m[35m (6.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Western"], ["created_at", "2021-01-04 04:52:19.263321"], ["updated_at", "2021-01-04 04:52:19.263321"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres" ORDER BY random() LIMIT $1[0m  [["LIMIT", 3]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (369.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "miniflix_development"[0m
+  [1m[35m (323.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_project_test"[0m
+  [1m[35m (933.6ms)[0m  [1m[35mCREATE DATABASE "miniflix_development" ENCODING = 'unicode'[0m
+  [1m[35m (933.3ms)[0m  [1m[35mCREATE DATABASE "sample_project_test" ENCODING = 'unicode'[0m
+  [1m[35m (144.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (87.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4586863541625385125)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20210101135633)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (68.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210101135633"]]
+  [1m[35m (12.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDeviseToUsers (20210101135652)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (110.7ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (71.4ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp[0m
+  [1m[35m (40.2ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (30.7ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210101135652"]]
+  [1m[35m (17.3ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMovies (20210104041803)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (67.6ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "name" character varying, "year" smallint, "director" character varying(60), "main_star" character varying(60), "description" text, "favorited" integer DEFAULT 0, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210104041803"]]
+  [1m[35m (12.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateGenres (20210104043143)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (64.6ms)[0m  [1m[35mCREATE TABLE "genres" ("id" bigserial primary key, "name" character varying(64), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "genres_movies" ("movie_id" bigint, "genre_id" bigint)[0m
+  [1m[35m (44.0ms)[0m  [1m[35mCREATE  INDEX  "index_genres_movies_on_movie_id" ON "genres_movies"  ("movie_id")[0m
+  [1m[35m (31.8ms)[0m  [1m[35mCREATE  INDEX  "index_genres_movies_on_genre_id" ON "genres_movies"  ("genre_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210104043143"]]
+  [1m[35m (12.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-04 04:53:15.454981"], ["updated_at", "2021-01-04 04:53:15.454981"]]
+  [1m[35m (10.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4586863541625385125)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMovie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "movies"[0m
+  [1m[36mGenre Destroy (0.2ms)[0m  [1m[31mDELETE FROM "genres"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "director", "main_star", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "STAR WARS: THE RISE OF SKYWALKER"], ["year", 1977], ["director", "J.J. Abrams"], ["main_star", "Mark Hammil, Adam Driver"], ["description", "When it's discovered that the evil Emperor Palpatine did not die at the hands of Darth Vader, the rebels must race against the clock to find out his whereabouts. Finn and Poe lead the Resistance to put a stop to the First Order's plans to form a new Empire, while Rey anticipates her inevitable confrontation with Kylo"], ["created_at", "2021-01-04 04:53:18.289843"], ["updated_at", "2021-01-04 04:53:18.289843"]]
+  [1m[35m (59.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "director", "main_star", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "THE LORD OF THE RINGS - THE RETURN OF THE KING"], ["year", 2003], ["director", "Peter Jackson"], ["main_star", "Elijah Wood, Ian Mc Kellen"], ["description", "The culmination of nearly 10 years' work and conclusion\nto Peter Jackson's epic trilogy based on the timeless J.R.R. Tolkien classic,\n 'The Lord of the Rings: The Return of the King' presents the final confrontation between the forces of good and evil fighting for control of the future of Middle-earth. Hobbits Frodo and Sam reach Mordor in their quest to destroy the `one ring', while Aragorn leads the forces of good against Sauron's evil army at the stone city of Minas Tirith."], ["created_at", "2021-01-04 04:53:18.353663"], ["updated_at", "2021-01-04 04:53:18.353663"]]
+  [1m[35m (16.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Action"], ["created_at", "2021-01-04 04:53:18.386802"], ["updated_at", "2021-01-04 04:53:18.386802"]]
+  [1m[35m (6.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Adventure"], ["created_at", "2021-01-04 04:53:18.397727"], ["updated_at", "2021-01-04 04:53:18.397727"]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Animation"], ["created_at", "2021-01-04 04:53:18.408960"], ["updated_at", "2021-01-04 04:53:18.408960"]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Biography"], ["created_at", "2021-01-04 04:53:18.420084"], ["updated_at", "2021-01-04 04:53:18.420084"]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Comedy"], ["created_at", "2021-01-04 04:53:18.431334"], ["updated_at", "2021-01-04 04:53:18.431334"]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Crime"], ["created_at", "2021-01-04 04:53:18.442449"], ["updated_at", "2021-01-04 04:53:18.442449"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Documentary"], ["created_at", "2021-01-04 04:53:18.453758"], ["updated_at", "2021-01-04 04:53:18.453758"]]
+  [1m[35m (5.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Drama"], ["created_at", "2021-01-04 04:53:18.465005"], ["updated_at", "2021-01-04 04:53:18.465005"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fantasy"], ["created_at", "2021-01-04 04:53:18.475734"], ["updated_at", "2021-01-04 04:53:18.475734"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "History"], ["created_at", "2021-01-04 04:53:18.486920"], ["updated_at", "2021-01-04 04:53:18.486920"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Horror"], ["created_at", "2021-01-04 04:53:18.498074"], ["updated_at", "2021-01-04 04:53:18.498074"]]
+  [1m[35m (5.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.7ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Musical"], ["created_at", "2021-01-04 04:53:18.509117"], ["updated_at", "2021-01-04 04:53:18.509117"]]
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mystery"], ["created_at", "2021-01-04 04:53:18.520034"], ["updated_at", "2021-01-04 04:53:18.520034"]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Romance"], ["created_at", "2021-01-04 04:53:18.531390"], ["updated_at", "2021-01-04 04:53:18.531390"]]
+  [1m[35m (9.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sci-Fi"], ["created_at", "2021-01-04 04:53:18.553664"], ["updated_at", "2021-01-04 04:53:18.553664"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thriller"], ["created_at", "2021-01-04 04:53:18.564487"], ["updated_at", "2021-01-04 04:53:18.564487"]]
+  [1m[35m (6.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "War"], ["created_at", "2021-01-04 04:53:18.575725"], ["updated_at", "2021-01-04 04:53:18.575725"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Western"], ["created_at", "2021-01-04 04:53:18.586714"], ["updated_at", "2021-01-04 04:53:18.586714"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGenre Load (0.8ms)[0m  [1m[34mSELECT "genres".* FROM "genres" ORDER BY random() LIMIT $1[0m  [["LIMIT", 3]]
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "genres_movies" ON "genres"."id" = "genres_movies"."genre_id" WHERE "genres_movies"."movie_id" = $1[0m  [["movie_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie::HABTM_Genres Create (0.4ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 1], ["genre_id", 9]]
+  [1m[36mMovie::HABTM_Genres Create (0.2ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 1], ["genre_id", 11]]
+  [1m[36mMovie::HABTM_Genres Create (0.2ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 1], ["genre_id", 13]]
+  [1m[35m (21.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres" ORDER BY random() LIMIT $1[0m  [["LIMIT", 3]]
+  [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "genres_movies" ON "genres"."id" = "genres_movies"."genre_id" WHERE "genres_movies"."movie_id" = $1[0m  [["movie_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie::HABTM_Genres Create (0.3ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 2], ["genre_id", 2]]
+  [1m[36mMovie::HABTM_Genres Create (0.2ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 2], ["genre_id", 12]]
+  [1m[36mMovie::HABTM_Genres Create (0.2ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 2], ["genre_id", 3]]
+  [1m[35m (8.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (727.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "miniflix_development"[0m
+  [1m[35m (321.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_project_test"[0m
+  [1m[35m (787.5ms)[0m  [1m[35mCREATE DATABASE "miniflix_development" ENCODING = 'unicode'[0m
+  [1m[35m (781.0ms)[0m  [1m[35mCREATE DATABASE "sample_project_test" ENCODING = 'unicode'[0m
+  [1m[35m (161.1ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (86.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4586863541625385125)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20210101135633)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (36.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210101135633"]]
+  [1m[35m (18.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDeviseToUsers (20210101135652)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (107.5ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (88.2ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+  [1m[35m (0.3ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp[0m
+  [1m[35m (26.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (31.3ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210101135652"]]
+  [1m[35m (11.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMovies (20210104041803)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (73.7ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "name" character varying, "year" smallint, "director" character varying(60), "main_star" character varying(60), "description" text, "favorited" integer DEFAULT 0, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210104041803"]]
+  [1m[35m (20.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateGenres (20210104043143)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (53.2ms)[0m  [1m[35mCREATE TABLE "genres" ("id" bigserial primary key, "name" character varying(64), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "genres_movies" ("movie_id" bigint, "genre_id" bigint)[0m
+  [1m[35m (29.7ms)[0m  [1m[35mCREATE  INDEX  "index_genres_movies_on_movie_id" ON "genres_movies"  ("movie_id")[0m
+  [1m[35m (32.1ms)[0m  [1m[35mCREATE  INDEX  "index_genres_movies_on_genre_id" ON "genres_movies"  ("genre_id")[0m
+  [1m[35m (31.6ms)[0m  [1m[35mCREATE  INDEX  "index_genres_movies_on_movie_id_and_genre_id" ON "genres_movies"  ("movie_id", "genre_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210104043143"]]
+  [1m[35m (19.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-04 04:54:24.323171"], ["updated_at", "2021-01-04 04:54:24.323171"]]
+  [1m[35m (19.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4586863541625385125)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMovie Destroy (0.4ms)[0m  [1m[31mDELETE FROM "movies"[0m
+  [1m[36mGenre Destroy (0.3ms)[0m  [1m[31mDELETE FROM "genres"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "director", "main_star", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "STAR WARS: THE RISE OF SKYWALKER"], ["year", 1977], ["director", "J.J. Abrams"], ["main_star", "Mark Hammil, Adam Driver"], ["description", "When it's discovered that the evil Emperor Palpatine did not die at the hands of Darth Vader, the rebels must race against the clock to find out his whereabouts. Finn and Poe lead the Resistance to put a stop to the First Order's plans to form a new Empire, while Rey anticipates her inevitable confrontation with Kylo"], ["created_at", "2021-01-04 04:54:27.145517"], ["updated_at", "2021-01-04 04:54:27.145517"]]
+  [1m[35m (15.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "director", "main_star", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "THE LORD OF THE RINGS - THE RETURN OF THE KING"], ["year", 2003], ["director", "Peter Jackson"], ["main_star", "Elijah Wood, Ian Mc Kellen"], ["description", "The culmination of nearly 10 years' work and conclusion\nto Peter Jackson's epic trilogy based on the timeless J.R.R. Tolkien classic,\n 'The Lord of the Rings: The Return of the King' presents the final confrontation between the forces of good and evil fighting for control of the future of Middle-earth. Hobbits Frodo and Sam reach Mordor in their quest to destroy the `one ring', while Aragorn leads the forces of good against Sauron's evil army at the stone city of Minas Tirith."], ["created_at", "2021-01-04 04:54:27.165006"], ["updated_at", "2021-01-04 04:54:27.165006"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.7ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Action"], ["created_at", "2021-01-04 04:54:27.183661"], ["updated_at", "2021-01-04 04:54:27.183661"]]
+  [1m[35m (8.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Adventure"], ["created_at", "2021-01-04 04:54:27.198490"], ["updated_at", "2021-01-04 04:54:27.198490"]]
+  [1m[35m (5.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Animation"], ["created_at", "2021-01-04 04:54:27.209161"], ["updated_at", "2021-01-04 04:54:27.209161"]]
+  [1m[35m (7.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Biography"], ["created_at", "2021-01-04 04:54:27.220283"], ["updated_at", "2021-01-04 04:54:27.220283"]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Comedy"], ["created_at", "2021-01-04 04:54:27.231017"], ["updated_at", "2021-01-04 04:54:27.231017"]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Crime"], ["created_at", "2021-01-04 04:54:27.242436"], ["updated_at", "2021-01-04 04:54:27.242436"]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Documentary"], ["created_at", "2021-01-04 04:54:27.253169"], ["updated_at", "2021-01-04 04:54:27.253169"]]
+  [1m[35m (7.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Drama"], ["created_at", "2021-01-04 04:54:27.264681"], ["updated_at", "2021-01-04 04:54:27.264681"]]
+  [1m[35m (7.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fantasy"], ["created_at", "2021-01-04 04:54:27.275766"], ["updated_at", "2021-01-04 04:54:27.275766"]]
+  [1m[35m (7.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "History"], ["created_at", "2021-01-04 04:54:27.286812"], ["updated_at", "2021-01-04 04:54:27.286812"]]
+  [1m[35m (7.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Horror"], ["created_at", "2021-01-04 04:54:27.297956"], ["updated_at", "2021-01-04 04:54:27.297956"]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Musical"], ["created_at", "2021-01-04 04:54:27.309001"], ["updated_at", "2021-01-04 04:54:27.309001"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mystery"], ["created_at", "2021-01-04 04:54:27.320497"], ["updated_at", "2021-01-04 04:54:27.320497"]]
+  [1m[35m (5.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Romance"], ["created_at", "2021-01-04 04:54:27.331230"], ["updated_at", "2021-01-04 04:54:27.331230"]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sci-Fi"], ["created_at", "2021-01-04 04:54:27.342288"], ["updated_at", "2021-01-04 04:54:27.342288"]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thriller"], ["created_at", "2021-01-04 04:54:27.353505"], ["updated_at", "2021-01-04 04:54:27.353505"]]
+  [1m[35m (12.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "War"], ["created_at", "2021-01-04 04:54:27.375529"], ["updated_at", "2021-01-04 04:54:27.375529"]]
+  [1m[35m (7.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Western"], ["created_at", "2021-01-04 04:54:27.386653"], ["updated_at", "2021-01-04 04:54:27.386653"]]
+  [1m[35m (7.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres" ORDER BY random() LIMIT $1[0m  [["LIMIT", 3]]
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "genres_movies" ON "genres"."id" = "genres_movies"."genre_id" WHERE "genres_movies"."movie_id" = $1[0m  [["movie_id", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie::HABTM_Genres Create (0.4ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 1], ["genre_id", 3]]
+  [1m[36mMovie::HABTM_Genres Create (0.2ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 1], ["genre_id", 11]]
+  [1m[36mMovie::HABTM_Genres Create (0.2ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 1], ["genre_id", 13]]
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" ORDER BY random() LIMIT $1[0m  [["LIMIT", 3]]
+  [1m[36mGenre Load (0.3ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "genres_movies" ON "genres"."id" = "genres_movies"."genre_id" WHERE "genres_movies"."movie_id" = $1[0m  [["movie_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie::HABTM_Genres Create (0.2ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 2], ["genre_id", 18]]
+  [1m[36mMovie::HABTM_Genres Create (0.2ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 2], ["genre_id", 4]]
+  [1m[36mMovie::HABTM_Genres Create (0.2ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 2], ["genre_id", 2]]
+  [1m[35m (13.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4586863541625385125)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateViewers (20210104045836)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (64.1ms)[0m  [1m[35mCREATE TABLE "viewers" ("id" bigserial primary key, "username" character varying(20), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210104045836"]]
+  [1m[35m (33.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(4586863541625385125)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/api/v1/movies" for ::1 at 2021-01-04 12:07:47 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/api/v1/movies"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started GET "/api/v1/movies" for ::1 at 2021-01-04 12:08:47 +0700
+  
+NameError (uninitialized constant Api::V1::ApiController
+Did you mean?  ApplicationController):
+  
+app/controllers/api/v1/movies_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/movies_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/movies_controller.rb:1:in `<main>'
+Started GET "/api/v1/movies" for ::1 at 2021-01-04 12:09:51 +0700
+Processing by Api::V1::MoviesController#index as JSON
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 0.0ms | Allocations: 6676)
+
+
+  
+NoMethodError (undefined method `paginate' for #<Class:0x0000559006f0cf80>
+Did you mean?  paginates_per):
+  
+app/controllers/api/v1/movies_controller.rb:8:in `index'
+Started GET "/api/v1/movies" for ::1 at 2021-01-04 12:10:29 +0700
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::MoviesController#index as JSON
+No template found for Api::V1::MoviesController#index, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.0ms | Allocations: 6725)
+
+
+Started GET "/api/v1/movies" for ::1 at 2021-01-04 12:17:39 +0700
+Processing by Api::V1::MoviesController#index as JSON
+  Rendering api/v1/movies/index.json.jbuilder
+  [1m[36mMovie Load (0.6ms)[0m  [1m[34mSELECT "movies".* FROM "movies" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/api/v1/movies/index.json.jbuilder:3
+  [1m[36mGenre Load (1.9ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "genres_movies" ON "genres"."id" = "genres_movies"."genre_id" WHERE "genres_movies"."movie_id" = $1[0m  [["movie_id", 1]]
+  ↳ app/views/api/v1/movies/index.json.jbuilder:12
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "genres_movies" ON "genres"."id" = "genres_movies"."genre_id" WHERE "genres_movies"."movie_id" = $1[0m  [["movie_id", 2]]
+  ↳ app/views/api/v1/movies/index.json.jbuilder:12
+  Rendered api/v1/movies/index.json.jbuilder (Duration: 70.4ms | Allocations: 18138)
+Completed 200 OK in 80ms (Views: 53.2ms | ActiveRecord: 19.4ms | Allocations: 21047)
+
+
+Started GET "/api/v1/movies" for ::1 at 2021-01-04 12:19:41 +0700
+Processing by Api::V1::MoviesController#index as JSON
+  Rendering api/v1/movies/index.json.jbuilder
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" LIMIT $1 OFFSET $2[0m  [["LIMIT", 30], ["OFFSET", 0]]
+  ↳ app/views/api/v1/movies/index.json.jbuilder:3
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "genres_movies" ON "genres"."id" = "genres_movies"."genre_id" WHERE "genres_movies"."movie_id" = $1[0m  [["movie_id", 1]]
+  ↳ app/views/api/v1/movies/index.json.jbuilder:12
+  [1m[36mGenre Load (0.5ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "genres_movies" ON "genres"."id" = "genres_movies"."genre_id" WHERE "genres_movies"."movie_id" = $1[0m  [["movie_id", 2]]
+  ↳ app/views/api/v1/movies/index.json.jbuilder:12
+  Rendered api/v1/movies/index.json.jbuilder (Duration: 8.7ms | Allocations: 3479)
+Completed 200 OK in 11ms (Views: 8.4ms | ActiveRecord: 1.3ms | Allocations: 4150)
+
+
+Started GET "/api/v1/movies/1" for ::1 at 2021-01-04 12:20:58 +0700
+Processing by Api::V1::MoviesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:16:in `set_movie'
+  Rendering api/v1/movies/show.json.jbuilder
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "genres_movies" ON "genres"."id" = "genres_movies"."genre_id" WHERE "genres_movies"."movie_id" = $1[0m  [["movie_id", 1]]
+  ↳ app/views/api/v1/movies/show.json.jbuilder:12
+  Rendered api/v1/movies/show.json.jbuilder (Duration: 2.3ms | Allocations: 1427)
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.6ms | Allocations: 2747)
+
+
+Started GET "/api/v1/movies/10" for ::1 at 2021-01-04 12:21:05 +0700
+Processing by Api::V1::MoviesController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:16:in `set_movie'
+Couldn't find Movie with 'id'=10
+Completed 404 Not Found in 7ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 3725)
+
+
+Started GET "/api/v1/movies/10" for ::1 at 2021-01-04 12:22:36 +0700
+Processing by Api::V1::MoviesController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:16:in `set_movie'
+Couldn't find Movie with 'id'=10
+Completed 404 Not Found in 8ms (Views: 0.2ms | ActiveRecord: 2.8ms | Allocations: 3272)
+
+
+Started GET "/api/v1/movies/10" for ::1 at 2021-01-04 12:24:24 +0700
+Processing by Api::V1::MoviesController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mMovie Load (0.3ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:16:in `set_movie'
+Couldn't find Movie with 'id'=10
+Completed 404 Not Found in 9ms (Views: 0.2ms | ActiveRecord: 3.4ms | Allocations: 3253)
+
+
+Started GET "/api/v1/movies/10" for ::1 at 2021-01-04 12:24:39 +0700
+Processing by Api::V1::MoviesController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:16:in `set_movie'
+Couldn't find Movie with 'id'=10
+Completed 404 Not Found in 12ms (Views: 0.2ms | ActiveRecord: 3.5ms | Allocations: 5556)
+
+
+Started GET "/api/v1/movies/10" for ::1 at 2021-01-04 12:25:04 +0700
+Processing by Api::V1::MoviesController#show as JSON
+  Parameters: {"id"=>"10"}
+  [1m[36mMovie Load (0.2ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:16:in `set_movie'
+Couldn't find Movie with 'id'=10
+Completed 404 Not Found in 8ms (Views: 0.2ms | ActiveRecord: 2.9ms | Allocations: 3262)
+
+
+Started GET "/api/v1/movies/1" for ::1 at 2021-01-04 12:25:12 +0700
+Processing by Api::V1::MoviesController#show as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mMovie Load (0.4ms)[0m  [1m[34mSELECT "movies".* FROM "movies" WHERE "movies"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/movies_controller.rb:16:in `set_movie'
+  Rendering api/v1/movies/show.json.jbuilder
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "genres_movies" ON "genres"."id" = "genres_movies"."genre_id" WHERE "genres_movies"."movie_id" = $1[0m  [["movie_id", 1]]
+  ↳ app/views/api/v1/movies/show.json.jbuilder:12
+  Rendered api/v1/movies/show.json.jbuilder (Duration: 20.8ms | Allocations: 7690)
+Completed 200 OK in 40ms (Views: 16.8ms | ActiveRecord: 5.3ms | Allocations: 12960)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (327.7ms)[0m  [1m[35mDROP DATABASE IF EXISTS "miniflix_development"[0m
+  [1m[35m (322.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "sample_project_test"[0m
+  [1m[35m (813.4ms)[0m  [1m[35mCREATE DATABASE "miniflix_development" ENCODING = 'unicode'[0m
+  [1m[35m (767.9ms)[0m  [1m[35mCREATE DATABASE "sample_project_test" ENCODING = 'unicode'[0m
+  [1m[35m (202.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (108.0ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(4586863541625385125)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20210101135633)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (44.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210101135633"]]
+  [1m[35m (19.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDeviseToUsers (20210101135652)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (128.9ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (101.5ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp[0m
+  [1m[35m (0.2ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp[0m
+  [1m[35m (48.6ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_email" ON "users"  ("email")[0m
+  [1m[35m (42.8ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_users_on_reset_password_token" ON "users"  ("reset_password_token")[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210101135652"]]
+  [1m[35m (10.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateMovies (20210104041803)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (84.3ms)[0m  [1m[35mCREATE TABLE "movies" ("id" bigserial primary key, "name" character varying, "year" smallint, "director" character varying(60), "main_star" character varying(60), "description" text, "favorited" integer DEFAULT 0, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210104041803"]]
+  [1m[35m (19.7ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateGenres (20210104043143)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (33.8ms)[0m  [1m[35mCREATE TABLE "genres" ("id" bigserial primary key, "name" character varying(64), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "genres_movies" ("movie_id" bigint, "genre_id" bigint)[0m
+  [1m[35m (30.6ms)[0m  [1m[35mCREATE  INDEX  "index_genres_movies_on_movie_id" ON "genres_movies"  ("movie_id")[0m
+  [1m[35m (42.9ms)[0m  [1m[35mCREATE  INDEX  "index_genres_movies_on_genre_id" ON "genres_movies"  ("genre_id")[0m
+  [1m[35m (31.6ms)[0m  [1m[35mCREATE  INDEX  "index_genres_movies_on_movie_id_and_genre_id" ON "genres_movies"  ("movie_id", "genre_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210104043143"]]
+  [1m[35m (16.2ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateViewers (20210104045836)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (52.2ms)[0m  [1m[35mCREATE TABLE "viewers" ("id" bigserial primary key, "username" character varying(20), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "movies_viewers" ("movie_id" bigint, "viewer_id" bigint)[0m
+  [1m[35m (45.1ms)[0m  [1m[35mCREATE  INDEX  "index_movies_viewers_on_movie_id" ON "movies_viewers"  ("movie_id")[0m
+  [1m[35m (29.9ms)[0m  [1m[35mCREATE  INDEX  "index_movies_viewers_on_viewer_id" ON "movies_viewers"  ("viewer_id")[0m
+  [1m[35m (29.0ms)[0m  [1m[35mCREATE  INDEX  "index_movies_viewers_on_movie_id_and_viewer_id" ON "movies_viewers"  ("movie_id", "viewer_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20210104045836"]]
+  [1m[35m (13.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-01-04 05:32:15.471129"], ["updated_at", "2021-01-04 05:32:15.471129"]]
+  [1m[35m (9.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(4586863541625385125)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mMovie Destroy (0.3ms)[0m  [1m[31mDELETE FROM "movies"[0m
+  [1m[36mGenre Destroy (0.3ms)[0m  [1m[31mDELETE FROM "genres"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.5ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "director", "main_star", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "STAR WARS: THE RISE OF SKYWALKER"], ["year", 1977], ["director", "J.J. Abrams"], ["main_star", "Mark Hammil, Adam Driver"], ["description", "When it's discovered that the evil Emperor Palpatine did not die at the hands of Darth Vader, the rebels must race against the clock to find out his whereabouts. Finn and Poe lead the Resistance to put a stop to the First Order's plans to form a new Empire, while Rey anticipates her inevitable confrontation with Kylo"], ["created_at", "2021-01-04 05:32:18.299057"], ["updated_at", "2021-01-04 05:32:18.299057"]]
+  [1m[35m (11.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie Create (0.4ms)[0m  [1m[32mINSERT INTO "movies" ("name", "year", "director", "main_star", "description", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["name", "THE LORD OF THE RINGS - THE RETURN OF THE KING"], ["year", 2003], ["director", "Peter Jackson"], ["main_star", "Elijah Wood, Ian Mc Kellen"], ["description", "The culmination of nearly 10 years' work and conclusion\nto Peter Jackson's epic trilogy based on the timeless J.R.R. Tolkien classic,\n 'The Lord of the Rings: The Return of the King' presents the final confrontation between the forces of good and evil fighting for control of the future of Middle-earth. Hobbits Frodo and Sam reach Mordor in their quest to destroy the `one ring', while Aragorn leads the forces of good against Sauron's evil army at the stone city of Minas Tirith."], ["created_at", "2021-01-04 05:32:18.314822"], ["updated_at", "2021-01-04 05:32:18.314822"]]
+  [1m[35m (7.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.6ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Action"], ["created_at", "2021-01-04 05:32:18.333278"], ["updated_at", "2021-01-04 05:32:18.333278"]]
+  [1m[35m (9.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Adventure"], ["created_at", "2021-01-04 05:32:18.348234"], ["updated_at", "2021-01-04 05:32:18.348234"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Animation"], ["created_at", "2021-01-04 05:32:18.359379"], ["updated_at", "2021-01-04 05:32:18.359379"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Biography"], ["created_at", "2021-01-04 05:32:18.370436"], ["updated_at", "2021-01-04 05:32:18.370436"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Comedy"], ["created_at", "2021-01-04 05:32:18.381553"], ["updated_at", "2021-01-04 05:32:18.381553"]]
+  [1m[35m (6.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Crime"], ["created_at", "2021-01-04 05:32:18.392718"], ["updated_at", "2021-01-04 05:32:18.392718"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Documentary"], ["created_at", "2021-01-04 05:32:18.403828"], ["updated_at", "2021-01-04 05:32:18.403828"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Drama"], ["created_at", "2021-01-04 05:32:18.414524"], ["updated_at", "2021-01-04 05:32:18.414524"]]
+  [1m[35m (6.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Fantasy"], ["created_at", "2021-01-04 05:32:18.425812"], ["updated_at", "2021-01-04 05:32:18.425812"]]
+  [1m[35m (6.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "History"], ["created_at", "2021-01-04 05:32:18.437044"], ["updated_at", "2021-01-04 05:32:18.437044"]]
+  [1m[35m (6.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Horror"], ["created_at", "2021-01-04 05:32:18.448195"], ["updated_at", "2021-01-04 05:32:18.448195"]]
+  [1m[35m (5.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Musical"], ["created_at", "2021-01-04 05:32:18.459192"], ["updated_at", "2021-01-04 05:32:18.459192"]]
+  [1m[35m (6.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.5ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Mystery"], ["created_at", "2021-01-04 05:32:18.470469"], ["updated_at", "2021-01-04 05:32:18.470469"]]
+  [1m[35m (5.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Romance"], ["created_at", "2021-01-04 05:32:18.486828"], ["updated_at", "2021-01-04 05:32:18.486828"]]
+  [1m[35m (13.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Sci-Fi"], ["created_at", "2021-01-04 05:32:18.503320"], ["updated_at", "2021-01-04 05:32:18.503320"]]
+  [1m[35m (51.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.4ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Thriller"], ["created_at", "2021-01-04 05:32:18.559027"], ["updated_at", "2021-01-04 05:32:18.559027"]]
+  [1m[35m (51.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.3ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "War"], ["created_at", "2021-01-04 05:32:18.614366"], ["updated_at", "2021-01-04 05:32:18.614366"]]
+  [1m[35m (29.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mGenre Create (0.2ms)[0m  [1m[32mINSERT INTO "genres" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "Western"], ["created_at", "2021-01-04 05:32:18.647571"], ["updated_at", "2021-01-04 05:32:18.647571"]]
+  [1m[35m (30.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGenre Load (0.7ms)[0m  [1m[34mSELECT "genres".* FROM "genres" ORDER BY random() LIMIT $1[0m  [["LIMIT", 3]]
+  [1m[36mGenre Load (0.6ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "genres_movies" ON "genres"."id" = "genres_movies"."genre_id" WHERE "genres_movies"."movie_id" = $1[0m  [["movie_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie::HABTM_Genres Create (0.3ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 1], ["genre_id", 8]]
+  [1m[36mMovie::HABTM_Genres Create (0.2ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 1], ["genre_id", 13]]
+  [1m[36mMovie::HABTM_Genres Create (0.2ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 1], ["genre_id", 5]]
+  [1m[35m (76.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" ORDER BY random() LIMIT $1[0m  [["LIMIT", 3]]
+  [1m[36mGenre Load (0.4ms)[0m  [1m[34mSELECT "genres".* FROM "genres" INNER JOIN "genres_movies" ON "genres"."id" = "genres_movies"."genre_id" WHERE "genres_movies"."movie_id" = $1[0m  [["movie_id", 2]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mMovie::HABTM_Genres Create (0.2ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 2], ["genre_id", 14]]
+  [1m[36mMovie::HABTM_Genres Create (0.2ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 2], ["genre_id", 18]]
+  [1m[36mMovie::HABTM_Genres Create (0.2ms)[0m  [1m[32mINSERT INTO "genres_movies" ("movie_id", "genre_id") VALUES ($1, $2)[0m  [["movie_id", 2], ["genre_id", 10]]
+  [1m[35m (23.5ms)[0m  [1m[35mCOMMIT[0m
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:40:55 +0700
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/api/v1/assign_favorite"):
+  
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:41:54 +0700
+  
+AbstractController::ActionNotFound (The action 'favorites' could not be found for Api::V1::ApiController):
+  
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:131:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:42:42 +0700
+  
+Zeitwerk::NameError (expected file /home/bainur/projects/miniflix/app/controllers/api/v1/favorites_controller.rb to define constant Api::V1::FavoritesController, but didn't):
+  
+zeitwerk (2.4.2) lib/zeitwerk/loader/callbacks.rb:18:in `on_file_autoloaded'
+zeitwerk (2.4.2) lib/zeitwerk/kernel.rb:27:in `block in require'
+zeitwerk (2.4.2) lib/zeitwerk/kernel.rb:26:in `tap'
+zeitwerk (2.4.2) lib/zeitwerk/kernel.rb:26:in `require'
+activesupport (6.0.3.4) lib/active_support/inflector/methods.rb:284:in `const_get'
+activesupport (6.0.3.4) lib/active_support/inflector/methods.rb:284:in `block in constantize'
+activesupport (6.0.3.4) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.3.4) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.3.4) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.3.4) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.3.4) lib/action_dispatch/http/request.rb:89:in `controller_class_for'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:100:in `binary_params_for?'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:91:in `set_binary_encoding'
+actionpack (6.0.3.4) lib/action_dispatch/http/parameters.rb:69:in `path_parameters='
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:47:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:43:00 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 0ms (ActiveRecord: 0.0ms | Allocations: 486)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+actionpack (6.0.3.4) lib/action_controller/metal/request_forgery_protection.rb:215:in `handle_unverified_request'
+actionpack (6.0.3.4) lib/action_controller/metal/request_forgery_protection.rb:247:in `handle_unverified_request'
+devise (4.7.3) lib/devise/controllers/helpers.rb:255:in `handle_unverified_request'
+actionpack (6.0.3.4) lib/action_controller/metal/request_forgery_protection.rb:242:in `verify_authenticity_token'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:428:in `block in make_lambda'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:200:in `block (2 levels) in halting'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:201:in `block in halting'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:513:in `block in invoke_before'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:513:in `each'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:513:in `invoke_before'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:134:in `run_callbacks'
+actionpack (6.0.3.4) lib/abstract_controller/callbacks.rb:41:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:33:in `block in process_action'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `block in instrument'
+activesupport (6.0.3.4) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (6.0.3.4) lib/active_support/notifications.rb:180:in `instrument'
+actionpack (6.0.3.4) lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+actionpack (6.0.3.4) lib/action_controller/metal/params_wrapper.rb:245:in `process_action'
+activerecord (6.0.3.4) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (6.0.3.4) lib/abstract_controller/base.rb:136:in `process'
+actionview (6.0.3.4) lib/action_view/rendering.rb:39:in `process'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:190:in `dispatch'
+actionpack (6.0.3.4) lib/action_controller/metal.rb:254:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:50:in `dispatch'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:33:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.3.4) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.3.4) lib/action_dispatch/routing/route_set.rb:834:in `call'
+rack-pjax (1.1.0) lib/rack/pjax.rb:12:in `call'
+remotipart (1.4.4) lib/remotipart/middleware.rb:32:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:40:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/cookies.rb:648:in `call'
+activerecord (6.0.3.4) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.3.4) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+web-console (4.1.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.1.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.1.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.3.4) lib/rails/rack/logger.rb:37:in `call_app'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.3.4) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.3.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.3.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+actionpack (6.0.3.4) lib/action_dispatch/middleware/host_authorization.rb:82:in `call'
+webpacker (4.3.0) lib/webpacker/dev_server_proxy.rb:23:in `perform_request'
+rack-proxy (0.6.5) lib/rack/proxy.rb:57:in `call'
+railties (6.0.3.4) lib/rails/engine.rb:527:in `call'
+puma (4.3.7) lib/puma/configuration.rb:228:in `call'
+puma (4.3.7) lib/puma/server.rb:713:in `handle_request'
+puma (4.3.7) lib/puma/server.rb:472:in `process_client'
+puma (4.3.7) lib/puma/server.rb:328:in `block in run'
+puma (4.3.7) lib/puma/thread_pool.rb:134:in `block in spawn_thread'
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:44:01 +0700
+  
+NoMethodError (undefined method `skip_before_filter' for Api::V1::ApiController:Class
+Did you mean?  skip_before_action):
+  
+app/controllers/api/v1/api_controller.rb:11:in `<class:ApiController>'
+app/controllers/api/v1/api_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/api_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/api_controller.rb:1:in `<main>'
+app/controllers/api/v1/favorites_controller.rb:3:in `<module:V1>'
+app/controllers/api/v1/favorites_controller.rb:2:in `<module:Api>'
+app/controllers/api/v1/favorites_controller.rb:1:in `<main>'
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:44:14 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+param is missing or the value is empty: favorite
+Completed 422 Unprocessable Entity in 6ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 5473)
+
+
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:44:39 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+param is missing or the value is empty: favorite
+Completed 422 Unprocessable Entity in 4ms (Views: 0.2ms | ActiveRecord: 0.0ms | Allocations: 2053)
+
+
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:45:23 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+  Parameters: {"favorite"=>{"viewer_id"=>1, "movie_id"=>1}}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 990)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/api/v1/favorites_controller.rb:16:in `assign_favorite'
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:46:34 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+  Parameters: {"favorite"=>{"viewer_id"=>1, "movie_id"=>1}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 3129)
+
+
+  
+NoMethodError (undefined method `movies' for ActiveRecord::RecordNotFound:Class):
+  
+app/controllers/api/v1/favorites_controller.rb:17:in `assign_favorite'
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:47:10 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+  Parameters: {"favorite"=>{"viewer_id"=>1, "movie_id"=>1}}
+No template found for Api::V1::FavoritesController#assign_favorite, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.0ms | Allocations: 5964)
+
+
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:47:29 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+  Parameters: {"favorite"=>{"viewer_id"=>1, "movie_id"=>1}}
+No template found for Api::V1::FavoritesController#assign_favorite, rendering head :no_content
+Completed 204 No Content in 3ms (ActiveRecord: 0.0ms | Allocations: 2157)
+
+
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:47:38 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+  Parameters: {"favorite"=>{"viewer_id"=>1, "movie_id"=>1}}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 2553)
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/api/v1/favorites_controller.rb:16:in `assign_favorite'
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:48:42 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+  Parameters: {"favorite"=>{"viewer_id"=>1, "movie_id"=>1}}
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers" WHERE "viewers"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/favorites_controller.rb:16:in `assign_favorite'
+Couldn't find Viewer with 'id'={"viewer_id"=>1, "movie_id"=>1}
+Completed 404 Not Found in 12ms (Views: 0.2ms | ActiveRecord: 4.5ms | Allocations: 3949)
+
+
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:48:52 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+  Parameters: {"favorite"=>{"viewer_id"=>1, "movie_id"=>1}}
+  [1m[36mViewer Load (0.4ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers" WHERE "viewers"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/favorites_controller.rb:16:in `assign_favorite'
+Couldn't find Viewer with 'id'={"viewer_id"=>1, "movie_id"=>1}
+Completed 404 Not Found in 11ms (Views: 0.3ms | ActiveRecord: 3.5ms | Allocations: 3409)
+
+
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:48:54 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+  Parameters: {"favorite"=>{"viewer_id"=>1, "movie_id"=>1}}
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers" WHERE "viewers"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/favorites_controller.rb:16:in `assign_favorite'
+Couldn't find Viewer with 'id'={"viewer_id"=>1, "movie_id"=>1}
+Completed 404 Not Found in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1442)
+
+
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:48:54 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+  Parameters: {"favorite"=>{"viewer_id"=>1, "movie_id"=>1}}
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers" WHERE "viewers"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/favorites_controller.rb:16:in `assign_favorite'
+Couldn't find Viewer with 'id'={"viewer_id"=>1, "movie_id"=>1}
+Completed 404 Not Found in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1454)
+
+
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:48:55 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+  Parameters: {"favorite"=>{"viewer_id"=>1, "movie_id"=>1}}
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers" WHERE "viewers"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/favorites_controller.rb:16:in `assign_favorite'
+Couldn't find Viewer with 'id'={"viewer_id"=>1, "movie_id"=>1}
+Completed 404 Not Found in 8ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1454)
+
+
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:48:55 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+  Parameters: {"favorite"=>{"viewer_id"=>1, "movie_id"=>1}}
+  [1m[36mViewer Load (0.6ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers" WHERE "viewers"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/favorites_controller.rb:16:in `assign_favorite'
+Couldn't find Viewer with 'id'={"viewer_id"=>1, "movie_id"=>1}
+Completed 404 Not Found in 3ms (Views: 0.2ms | ActiveRecord: 0.6ms | Allocations: 1443)
+
+
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:48:56 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+  Parameters: {"favorite"=>{"viewer_id"=>1, "movie_id"=>1}}
+  [1m[36mViewer Load (0.2ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers" WHERE "viewers"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/favorites_controller.rb:16:in `assign_favorite'
+Couldn't find Viewer with 'id'={"viewer_id"=>1, "movie_id"=>1}
+Completed 404 Not Found in 2ms (Views: 0.1ms | ActiveRecord: 0.2ms | Allocations: 1442)
+
+
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:48:57 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+  Parameters: {"favorite"=>{"viewer_id"=>1, "movie_id"=>1}}
+  [1m[36mViewer Load (0.3ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers" WHERE "viewers"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/favorites_controller.rb:16:in `assign_favorite'
+Couldn't find Viewer with 'id'={"viewer_id"=>1, "movie_id"=>1}
+Completed 404 Not Found in 3ms (Views: 0.2ms | ActiveRecord: 0.3ms | Allocations: 1442)
+
+
+Started POST "/api/v1/assign_favorite" for ::1 at 2021-01-04 12:48:57 +0700
+Processing by Api::V1::FavoritesController#assign_favorite as JSON
+  Parameters: {"favorite"=>{"viewer_id"=>1, "movie_id"=>1}}
+  [1m[36mViewer Load (0.4ms)[0m  [1m[34mSELECT "viewers".* FROM "viewers" WHERE "viewers"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/api/v1/favorites_controller.rb:16:in `assign_favorite'
+Couldn't find Viewer with 'id'={"viewer_id"=>1, "movie_id"=>1}
+Completed 404 Not Found in 3ms (Views: 0.2ms | ActiveRecord: 0.4ms | Allocations: 1442)
+
+
+Started GET "/" for ::1 at 2021-01-04 12:49:02 +0700
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/railties-6.0.3.4/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.7ms | Allocations: 188)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.0ms | Allocations: 1028)
+
+
+Started GET "/admin" for ::1 at 2021-01-04 12:49:05 +0700
+Processing by RailsAdmin::MainController#dashboard as HTML
+Completed 401 Unauthorized in 3ms (ActiveRecord: 0.0ms | Allocations: 420)
+
+
+Started GET "/admin/login" for ::1 at 2021-01-04 12:49:05 +0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/shared/_links.html.erb (Duration: 1.8ms | Allocations: 596)
+  Rendered /home/bainur/.rbenv/versions/2.7.1/lib/ruby/gems/2.7.0/gems/devise-4.7.3/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 2753)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 140ms (Views: 119.5ms | ActiveRecord: 3.0ms | Allocations: 57425)
+
+
