@@ -13,14 +13,20 @@ module Api
       end
 
       def assign_favorite
-          @viewer = Viewer.find(favorite_params)
-          @viewer.movies << Movie.find(favorite_params[:favorite][:movie_id])
+          @viewer = Viewer.find_by_username(params[:favorite][:username])
+          if @viewer.blank?
+            render json: {success: false, message: "User Not Found" } , status: :not_found
+          else
+            @movies = @viewer.movies << Movie.find(params[:favorite][:movie_id])
+            @message = "Success"
+            render 'api/v1/movies/favorited_movies'
+          end
       end
 
       private
 
       def favorite_params
-        favorite_params = params.require(:favorite).permit(:viewer_id, :movie_id)
+        favorite_params = params.require(:favorite).permit(:username, :movie_id)
       end
 
       def set_favorite

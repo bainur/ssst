@@ -8,6 +8,7 @@ Rails.application.routes.draw do
     namespace :v1, defaults: { format: :json } do
       resources :movies
       post :assign_favorite, to: 'favorites#assign_favorite'
+      post :login, to: 'login#login_viewer'
     end
   end
 end
