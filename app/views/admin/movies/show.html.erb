@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+<p>
+  <strong>Name:</strong>
+  <%= @movie.name %>
+</p>
+<p>
+  <strong>Year:</strong>
+  <%= @movie.year %>
+</p>
+<p>
+  <strong>Director:</strong>
+  <%= @movie.director %>
+</p>
+<p>
+  <strong>Main Star:</strong>
+  <%= @movie.main_star %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @movie.description %>
+</p>
+
+<p>
+  <strong>Favorited:</strong>
+  <%= @movie.favorited %>
+</p>
+<p>
+  <strong>Genre:</strong>
+  <%= @movie.genres.map(&:name).join(", ") %>
+</p>
+
+<%= link_to 'Edit', edit_admin_movie_path(@movie) %> |
+<%= link_to 'Back', admin_movies_path %>
