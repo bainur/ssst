@@ -1,0 +1,34 @@
+<div class="row">
+  <div class="col-12">
+    <div class="card">
+      <!-- /.card-header -->
+      <div class="card-body table-responsive p-0">
+        <table class="table table-hover text-nowrap">
+          <thead>
+          <tr>
+            <th>Username</th>
+            <th>Number Favorite Movies</th>
+            <th colspan="3"></th>
+          </tr>
+          </thead>
+
+          <tbody>
+          <% @viewers.each_with_index do |viewer, index| %>
+            <tr>
+              <td><%= link_to viewer.username, admin_user_path(viewer) %></td>
+              <td><%= pluralize(viewer.movies.count, "time") %> Favorited </td>
+              <td><%= link_to 'Delete', admin_user_path(viewer),  method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+          </tbody>
+        </table>
+
+      </div>
+      <div class="card-footer clearfix">
+        <%= will_paginate @viewers %>
+      </div>
+      <!-- /.card-body -->
+    </div>
+    <!-- /.card -->
+  </div>
+</div>
