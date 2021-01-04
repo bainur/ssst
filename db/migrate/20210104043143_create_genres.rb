@@ -11,6 +11,6 @@ class CreateGenres < ActiveRecord::Migration[6.0]
       t.belongs_to :genre
     end
 
-    add_index :genres_movies, [:movie_id, :genre_id]
+    add_index :genres_movies, [:movie_id, :genre_id], unique: true
   end
 end

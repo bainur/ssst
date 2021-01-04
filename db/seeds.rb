@@ -42,3 +42,9 @@ genres = Genre.create([
 movies.each do |movie|
   movie.genres = Genre.order("random()").limit(3)
 end
+
+viewers = Viewer.create([
+                          { username: "user1@example.com" },
+                          { username: "user2@example.com" },
+                          { username: "user3@example.com" }
+                        ])

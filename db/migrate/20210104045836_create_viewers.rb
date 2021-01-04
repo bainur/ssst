@@ -12,6 +12,6 @@ class CreateViewers < ActiveRecord::Migration[6.0]
       t.belongs_to :viewer
     end
 
-    add_index :movies_viewers, [:movie_id, :viewer_id]
+    add_index :movies_viewers, [:movie_id, :viewer_id], unique: true
   end
 end
