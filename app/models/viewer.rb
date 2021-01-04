@@ -14,7 +14,10 @@ class Viewer < ApplicationRecord
     self.movies
   end
 
-  def adjust_favorite
-
+  def adjust_favorite_number
+    # when deleted from admin, adjust number favorited for each movie
+    self.movies.each do |mv|
+      mv.decrement!(:favorited)
+    end
   end
 end

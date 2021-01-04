@@ -10,7 +10,7 @@ class Admin::UsersController < ApplicationController
 
   def destroy
     # remove favorites
-    @viewer.movies.clear
+    @viewer.adjust_favorite_number
     # remove viewer
     @viewer.destroy
     respond_to do |format|
