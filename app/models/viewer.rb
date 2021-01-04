@@ -8,7 +8,9 @@ class Viewer < ApplicationRecord
   end
 
   def add_favorite(movie)
-    movie.increment!(:favorited)
     self.movies << movie
+    # if its duplicate it will thrown error and wont go to this below code
+    movie.increment!(:favorited)
+    self.movies
   end
 end

@@ -22,7 +22,7 @@ module Api
           # if it is already favorited, remove it. else it cannot be unfavorited
           if @viewer.movies.include?(@movie)
             @movies = @viewer.remove_favorite(@movie)
-            @message = "Movie #{@movie.name} already remove from your favorites"
+            @message = "Movie #{@movie.name} have removed from your favorites"
           else
             return favorite_not_found(@movie)
           end
