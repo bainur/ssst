@@ -19,5 +19,6 @@ class Viewer < ApplicationRecord
     self.movies.each do |mv|
       mv.decrement!(:favorited)
     end
+    self.movies.clear
   end
 end
