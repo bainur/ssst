@@ -2,6 +2,8 @@ class Viewer < ApplicationRecord
   has_many :movies_viewers
   has_many :movies, through: :movies_viewers
 
+  #validates_length_of :username, minimum: 1, maximum: 20, allow_blank: false
+
   def remove_favorite(movie)
     self.movies.delete(movie)
     movie.decrement!(:favorited)
