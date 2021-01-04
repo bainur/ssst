@@ -2,6 +2,7 @@
 Movie.delete_all
 Genre.delete_all
 
+User.create!(email: 'admin@example.com', password: 'password')
 movies = Movie.create([
                         { name: 'STAR WARS: THE RISE OF SKYWALKER',
                           year: 1977,
