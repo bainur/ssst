@@ -1,0 +1,187 @@
+{
+	"info": {
+		"_postman_id": "52de11e7-f638-47d8-860c-9edab986dce2",
+		"name": "MINIFLIX",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login By username [CREATE]",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test_user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/v1/login",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movies [ALL]",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test_user1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/v1/movies",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"movies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Movies [SHOW]",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test_user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/v1/movies/4",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"movies",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Assign Favorite Movie [CREATE]",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n   \"username\": \"test_user\",\n   \"movie_id\": 2\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/v1/assign_favorite",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"assign_favorite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Favorite Movie [CREATE]",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{    \n    \"username\": \"test_user\",\n    \"movie_id\": 2 \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/v1/remove_favorite",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"remove_favorite"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User Favorite Movie [SHOW]",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"test_user\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{hostname}}/api/v1/fav_movies",
+					"host": [
+						"{{hostname}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"fav_movies"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
