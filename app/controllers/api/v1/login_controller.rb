@@ -18,7 +18,7 @@ module Api
           end
         end
         @movies = @viewer.movies
-        render 'api/v1/movies/favorited_movies'
+        render 'api/v1/favorites/favorited_movies'
       end
     end
   end

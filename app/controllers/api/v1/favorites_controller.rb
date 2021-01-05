@@ -16,7 +16,8 @@ module Api
       def assign_favorite
         @movies = @viewer.add_favorite(@movie)
         @message = "Movie #{@movie.name} added to your favoritees !"
-        render 'api/v1/movies/favorited_movies'
+        
+        render 'favorited_movies'
       end
 
       def remove_favorite
@@ -27,18 +28,18 @@ module Api
         @message = "Movie #{@movie.name} have removed from your favorites"
         @movies = @viewer.movies
 
-        render 'api/v1/movies/favorited_movies'
+        render 'favorited_movies'
       end
 
       def fav_movies
         @viewer = Viewer.find_by_username!(params[:username])
         @movies = @viewer.movies
         @message = 'Data Found !'
-        render 'api/v1/movies/favorited_movies'
+        render 'favorited_movies'
       end
 
       private
-
+      
       def viewer_not_found
         render json: { success: false, message: 'User Not Found !' }, status: :not_found
       end
@@ -46,11 +47,7 @@ module Api
       def favorite_not_found(movie)
         render json: { success: false, message: "Movie #{movie.name} are Not Favorited yet for this User!" }, status: :not_found
       end
-
-      def favorite_params
-        favorite_params = params.require(:favorite).permit(:username, :movie_id)
-      end
-
+      
       def find_movie
         @movie = Movie.find(params[:movie_id])
       end

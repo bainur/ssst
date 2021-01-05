@@ -4,7 +4,7 @@ User.delete_all
 Movie.delete_all
 Genre.delete_all
 
-User.create!(email: 'admin@example.com', password: 'password')
+User.create!(email: 'admin@example.com', password: '86WmYwjFVF>q}@7P')
 genres = Genre.create([
                         {name: 'Action'},
                         { name: 'Adventure' },
