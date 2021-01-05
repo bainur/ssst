@@ -2,6 +2,7 @@ json.success true
 json.message "Data Found"
 json.data [@movie] do |movie|
   json.id movie.id
+  json.already_favorited movie.check_favorite_by_user(@username)
   json.name movie.name
   json.year movie.year
   json.director movie.director

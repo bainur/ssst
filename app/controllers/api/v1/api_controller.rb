@@ -10,8 +10,20 @@ module Api
       rescue_from ActiveRecord::RecordNotUnique,  with: :render_uniq_record
       rescue_from ActiveRecord::ValueTooLong, with: :render_too_long
       skip_before_action :verify_authenticity_token
+      before_action :check_username_params # all params should include username params, since the auth are only on this way only
 
       private
+
+      def check_username_params
+        if params[:username].blank?
+          return render json: { success: false, message: I18n.t('api.errors.missing_param') }, status: :unprocessable_entity
+        else
+          @username = Viewer.find_by_username(params[:username])
+          if @username.blank?
+            return render json: { success: false, message: "Username not found" }, status: :unauthorized
+          end
+        end
+      end
 
       def render_too_long
         render json: { success: false, message: "Max 20 Charaters !" }, status: :bad_request

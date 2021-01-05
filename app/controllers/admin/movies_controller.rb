@@ -41,12 +41,16 @@ class Admin::MoviesController < ApplicationController
   # PATCH/PUT /movies/1.json
   def update
     respond_to do |format|
+      begin
       if @movie.update(movie_params)
         format.html { redirect_to admin_movie_path(@movie), notice: 'Movie was successfully updated.' }
         format.json { render :show, status: :ok, location: @movie }
       else
         format.html { render :edit }
         format.json { render json: @movie.errors, status: :unprocessable_entity }
+      end
+      rescue ActiveRecord::ValueTooLong => e
+        format.html { render :edit }
       end
     end
   end

@@ -5,7 +5,8 @@ module Api
 
       def index
         page = params[:page] || 1
-        @movies = Movie.paginate(page: page,per_page: params[:per_page])
+        @movies = Movie.includes(:genres).paginate(page: page,per_page: 10)
+        @favorited_movie_ids = @username.movies.each(&:id)
       end
 
       def show; end

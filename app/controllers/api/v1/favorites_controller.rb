@@ -52,11 +52,11 @@ module Api
       end
 
       def find_movie
-        @movie = Movie.find(params[:favorite][:movie_id])
+        @movie = Movie.find(params[:movie_id])
       end
 
       def set_viewer
-        @viewer = Viewer.find_by_username(params[:favorite][:username])
+        @viewer = Viewer.find_by_username(params[:username])
         return viewer_not_found if @viewer.blank?
       end
     end
