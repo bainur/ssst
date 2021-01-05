@@ -10,7 +10,7 @@ module Api
       rescue_from ActiveRecord::RecordNotUnique,  with: :render_uniq_record
       rescue_from ActiveRecord::ValueTooLong, with: :render_too_long
       skip_before_action :verify_authenticity_token
-      before_action :check_username_params # all params should include username params, since the auth are only on this way only
+      before_action :check_username_params, except: :login_viewer # all params should include username params, since the auth are only on this way only
 
       private
 

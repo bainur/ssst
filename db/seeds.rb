@@ -46,8 +46,8 @@ to Peter Jackson's epic trilogy based on the timeless J.R.R. Tolkien classic"
 #   movie.genres = Genre.order("random()").limit(3)
 # end
 
-viewers = Viewer.create([
-                          { username: "user1@example.com" },
-                          { username: "user2@example.com" },
-                          { username: "user3@example.com" }
+viewers = Viewer.create!([
+                          { username: "user1_example" },
+                          { username: "user2_example" },
+                          { username: "user3_example" }
                         ])
