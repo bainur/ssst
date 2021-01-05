@@ -1,5 +1,7 @@
+# API V1
 module Api
   module V1
+    # favorite class for viewer
     class FavoritesController < Api::V1::ApiController
       before_action :set_viewer, only: [:assign_favorite, :remove_favorite]
       before_action :find_movie, only: [:assign_favorite, :remove_favorite]
@@ -9,38 +11,36 @@ module Api
         @movies = Movie.paginate(page: page, per_page: params[:per_page])
       end
 
-      def show
-      end
+      def show; end
 
       def assign_favorite
-          @movies = @viewer.add_favorite(@movie)
-          @message = "Movie #{@movie.name} added to your favoritees !"
-          render 'api/v1/movies/favorited_movies'
+        @movies = @viewer.add_favorite(@movie)
+        @message = "Movie #{@movie.name} added to your favoritees !"
+        render 'api/v1/movies/favorited_movies'
       end
 
       def remove_favorite
-          # if it is already favorited, remove it. else it cannot be unfavorited
-          if @viewer.movies.include?(@movie)
-            @movies = @viewer.remove_favorite(@movie)
-            @message = "Movie #{@movie.name} have removed from your favorites"
-          else
-            return favorite_not_found(@movie)
-          end
-          @movies = @viewer.movies
-          render 'api/v1/movies/favorited_movies'
+        # if it is already favorited, remove it. else it cannot be unfavorited
+        return favorite_not_found(@movie) unless @viewer.movies.include?(@movie)
+
+        @movies = @viewer.remove_favorite(@movie)
+        @message = "Movie #{@movie.name} have removed from your favorites"
+        @movies = @viewer.movies
+
+        render 'api/v1/movies/favorited_movies'
       end
 
       def fav_movies
         @viewer = Viewer.find_by_username!(params[:username])
         @movies = @viewer.movies
-        @message = "Data Found !"
+        @message = 'Data Found !'
         render 'api/v1/movies/favorited_movies'
       end
 
       private
 
       def viewer_not_found
-        render json: { success: false, message: "User Not Found !" }, status: :not_found
+        render json: { success: false, message: 'User Not Found !' }, status: :not_found
       end
 
       def favorite_not_found(movie)
