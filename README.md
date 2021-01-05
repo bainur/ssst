@@ -1,16 +1,15 @@
 # README
 
-
+All API REQUEST are using json. 
+all the API request should have username parameters on the body
 Here you can find the API Documentation
 
-| API Endpoint                           | Functionality                                | Status | User                       |
-| -------------------------------------- | -------------------------------------------- | ------ | -------------------------- |
-| POST api/v1/login               | Login / Create a user                                 | OK     | Movies                       |
-| GET api/v1/movies                    | Returns a list of movies                   | OK     | Admin or contrib           |
-| POST api/v1/accounts                   | Create a new accounts                        | Ok     | Admin or Contrib           |
-| PUT api/v1/accounts/:id                | Update an account bt nt currency & country   | Ok     | Admin or Contrib           |
-| DELETE api/v1/accounts/:id             | Delete an account                            | Ok     | Admin or Contrib           |
-| PUT api/v1/modify_countries/:id        | Update an account countries                  | Ok     | Admin or Contrib           |
-| DELETE api/v1/modify_countries/:id     | Delete an account countries                  | Ok     | Admin or Contrib           |
-| PUT api/v1/modify_currencies/:id       | Update an account currencies                 | Ok     | Admin or Contrib           |
-| DELETE api/v1/modify_currencies/:id    | Delete an account currencies                 | Ok     | Admin or Contrib           |
+| API Endpoint                           | Functionality                                | Status | Parameters On Body , JSON FORMAT|
+| -------------------------------------- | -------------------------------------------- | ------ | -----------
+| POST api/v1/login                      | Login / Create a user                        | OK     | username   |
+| GET api/v1/movies                      | Returns a list of movies                     | OK     | username   |
+| GET api/v1/movies/:id                  | SHOW detail movie                            | Ok     | username   |
+| GET api/v1/fav_movies                  | SHOW Favorite movies From a user             | Ok     | username   |
+| POST /api/v1/assign_favorite           | Assign Favorite Movie                        | Ok     | username, movie_id   |
+| POST /api/v1/remove_favorite           | Remove Favorite Movie                        | Ok     | username, movie_id   |
+
