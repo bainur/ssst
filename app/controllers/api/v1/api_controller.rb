@@ -20,7 +20,7 @@ module Api
         else
           @username = Viewer.find_by_username(params[:username])
           if @username.blank?
-            return render json: { success: false, message: "Username not found" }, status: :unauthorized
+            return render json: { success: false, message: "Username not found ! You should login first to create user !" }, status: :unauthorized
           end
         end
       end

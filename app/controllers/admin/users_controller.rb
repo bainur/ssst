@@ -14,7 +14,7 @@ class Admin::UsersController < ApplicationController
     # remove viewer
     @viewer.destroy
     respond_to do |format|
-      format.html { redirect_to admin_movies_url, notice: 'Movie was successfully destroyed.' }
+      format.html { redirect_to admin_users_url, notice: 'User was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
