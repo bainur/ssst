@@ -3,8 +3,8 @@ module Api
   module V1
     # favorite class for viewer
     class FavoritesController < Api::V1::ApiController
-      before_action :set_viewer, only: [:assign_favorite, :remove_favorite]
-      before_action :find_movie, only: [:assign_favorite, :remove_favorite]
+      before_action :set_viewer, only: %i[assign_favorite remove_favorite]
+      before_action :find_movie, only: %i[assign_favorite remove_favorite]
 
       def index
         page = params[:page] || 1
@@ -16,7 +16,7 @@ module Api
       def assign_favorite
         @movies = @viewer.add_favorite(@movie)
         @message = "Movie #{@movie.name} added to your favoritees !"
-        
+
         render 'favorited_movies'
       end
 
@@ -39,7 +39,7 @@ module Api
       end
 
       private
-      
+
       def viewer_not_found
         render json: { success: false, message: 'User Not Found !' }, status: :not_found
       end
@@ -47,7 +47,7 @@ module Api
       def favorite_not_found(movie)
         render json: { success: false, message: "Movie #{movie.name} are Not Favorited yet for this User!" }, status: :not_found
       end
-      
+
       def find_movie
         @movie = Movie.find(params[:movie_id])
       end
